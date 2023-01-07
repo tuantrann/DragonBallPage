@@ -13,27 +13,27 @@ body {
     animation: stand .8s steps(2) infinite;
 }
 
-.base {
-    background-image: url('../../assets/goku-standing-sheet.png');
-}
+// .base {
+//     background-image: url('../../assets/goku-standing-sheet.png');
+// }
 
-.ssj {
-    background-image: url('../../assets/goku-ssj-standing-sheet.png');
-}
+// .ssj {
+//     background-image: url('../../assets/goku-ssj-standing-sheet.png');
+// }
 
-.powerup.base {
-    width: 210px;
-    height: 257px;
-    background-image: url('../../assets/goku-powerup-sheet.png');
-    animation: powerup .3s steps(2) infinite;
-}
+// .powerup.base {
+//     width: 210px;
+//     height: 257px;
+//     background-image: url('../../assets/goku-powerup-sheet.png');
+//     animation: powerup .3s steps(2) infinite;
+// }
 
-.powerup.ssj {
-    width: 225px;
-    height: 257px;
-    background-image: url('../../assets/goku-ssj-powerup-sheet.png');
-    animation: powerup .3s steps(2) infinite;
-}
+// .powerup.ssj {
+//     width: 225px;
+//     height: 257px;
+//     background-image: url('../../assets/goku-ssj-powerup-sheet.png');
+//     animation: powerup .3s steps(2) infinite;
+// }
 
 #meter-container {
     position: relative;

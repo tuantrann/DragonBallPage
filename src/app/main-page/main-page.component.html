@@ -16,7 +16,7 @@
 <div class="background" *ngIf="!isLoading && loggedIn">
   <div class="header">
     <div class="header-info">
-      <div class="icon">
+      <!-- <div class="icon">
         <img
           style="max-width: 80%; max-height: 80%"
           src="../../assets/dragonball_goku_icon"
@@ -32,7 +32,7 @@
           src="../../assets/goku_fly"
           alt=""
         />
-      </div>
+      </div> -->
 
       <div class="separator"></div>
     </div>
@@ -54,13 +54,13 @@
         <h2>VIDEOS</h2>
         <div class="video">
           <div style="display: flex; flex-direction: row">
-            <img
+            <!-- <img
               (click)="currentPlaying = false; currentSearching = false"
               *ngIf="currentPlaying"
               class="vegeta-laugh"
               src="../../assets/vegeta-laughing.gif"
               alt=""
-            />
+            /> -->
             <mat-form-field class="input" appearance="outline">
               <mat-icon matPrefix>search</mat-icon>
               <input matInput placeholder=" Search" [(ngModel)]="inputValue" />
@@ -136,7 +136,7 @@
     <div class="footer">
       <div class="img-footer"></div>
       <div class="logo-outside">
-        <img class="logo-footer" src="../../assets/goku-loho.png" alt="" />
+        <!-- <img class="logo-footer" src="../../assets/goku-loho.png" alt="" /> -->
       </div>
     </div>
     <div class="ball-icon-sticky">
