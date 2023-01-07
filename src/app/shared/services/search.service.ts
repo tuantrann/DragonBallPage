@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import {environment as environmentProd} from '../../../environments/environment.prod';
+import {environment as environmentProd} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SearchService {
   private API_URL = 'https://www.googleapis.com/youtube/v3';
-  private API_KEY = environmentProd.GOOGLE_API_KEY;
+  private API_KEY = environmentProd.API_KEY;
 
   private headers: HttpHeaders;
   constructor(private http: HttpClient) {

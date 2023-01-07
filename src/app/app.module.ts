@@ -23,7 +23,7 @@ import { SearchDialog } from './search-dialog/search-dialog.component';
 import { GokuGokupowerupComponent } from './goku-gokupowerup/goku-gokupowerup.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FormsModule } from '@angular/forms';
-import {environment as environmentProd} from '../environments/environment.prod';
+import {environment as environmentProd} from '../environments/environment';
 
 const googleLoginOptions: any = {
   scopes: 'https://www.googleapis.com/auth/youtube.readonly'
@@ -70,7 +70,7 @@ const googleLoginOptions: any = {
           {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider(
-              environmentProd.API_KEY,
+              environmentProd.GOOGLE_API_KEY,
               googleLoginOptions
             )
           }
