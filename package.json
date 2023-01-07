@@ -5,8 +5,8 @@
     "ng": "ng",
     "config": "ts-node ./src/assets/setEnv.ts",
     "compress": "npm install -g ts-node && npm run config -- --environment=prod && ng build --configuration production",
-    "start": "npm install -g ts-node && npm run config -- --environment=prod && ng build --configuration production",
-    "build": "npm install -g ts-node && npm run config -- --environment=prod && ng build --configuration production",
+    "start": "npm install -g ts-node &&  npm run config -- --environment=prod && node --max_old_space_size=16384 ./node_modules/@angular/cli/bin/ng build --configuration production --build-optimizer --output-hashing=none",
+    "build": "npm install -g ts-node &&  npm run config -- --environment=prod && node --max_old_space_size=16384 ./node_modules/@angular/cli/bin/ng build --configuration production --build-optimizer --output-hashing=none",
     "watch": "ng build --watch --configuration development  ",
     "test": "ng test"
   },
@@ -49,4 +49,3 @@
     "karma-jasmine-html-reporter": "~2.0.0"
   }
 }
-
