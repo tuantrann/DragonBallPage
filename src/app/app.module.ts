@@ -23,7 +23,7 @@ import { SearchDialog } from './search-dialog/search-dialog.component';
 import { GokuGokupowerupComponent } from './goku-gokupowerup/goku-gokupowerup.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FormsModule } from '@angular/forms';
-import {environment as environmentProd} from '../environments/environment';
+import {environment as environmentProd} from '../environments/environment.prod';
 
 const googleLoginOptions: any = {
   scopes: 'https://www.googleapis.com/auth/youtube.readonly'
