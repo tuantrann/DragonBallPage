@@ -1,0 +1,13 @@
+<div [ngClass]="{ outside: !search }">
+  <div class="container">
+    <div class="image-container">
+      <img class="image" [src]="videos.img" alt="" />
+    </div>
+    <div class="description-container">
+      <h3 class="date">{{ videos.published | date : "short" }}</h3>
+      <h1 class="title">{{ videos.title }}</h1>
+
+      <h3 class="channel">{{ videos.channel }}</h3>
+    </div>
+  </div>
+</div>

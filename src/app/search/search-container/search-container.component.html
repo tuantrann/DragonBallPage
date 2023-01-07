@@ -1,0 +1,13 @@
+<div>
+    <app-search-input (search)="handleSearch($event)"></app-search-input>
+    <div *ngIf="inputTouched && !videos.length">
+      <div>
+        <i class="warning icon"></i>
+        <span style="margin: 0 auto;">No Video Found</span>
+      </div>
+    </div>
+    <div *ngIf="loading" style="margin: 3rem;">
+      <div></div>
+    </div>
+    <app-search-list *ngIf="!loading" [videos]="videos"></app-search-list>
+  </div>

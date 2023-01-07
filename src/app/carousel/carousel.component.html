@@ -1,0 +1,39 @@
+<div
+  class="carousel"
+  (touchstart)="swipe($event, 'start')"
+  (touchend)="swipe($event, 'end')"
+>
+  <div class="prevSlide">
+    <img class="prevImg" [src]="prevImg" alt="" />
+  </div>
+  <div class="currentSlide">
+    <img
+      (click)="goBackWard()"
+      class="backButton"
+      src="../../assets/nav_slider_hv.png"
+      alt=""
+    />
+    <img class="currentImg" [src]="currentImg" />
+    <img
+      class="btnPlay"
+      (click)="playThis()"
+      src="../../assets/btn_play.png"
+      alt=""
+    />
+    <img
+      (click)="goNext()"
+      class="forwardButton"
+      src="../../assets/nav_slider_hv.png"
+      alt=""
+    />
+
+    <div>
+      <h3 class="text">
+        {{ _slides[currentIndex].title }}
+      </h3>
+    </div>
+  </div>
+  <div class="nextSlide">
+    <img class="nextImg" [src]="nextImg" />
+  </div>
+</div>

@@ -1,0 +1,134 @@
+:host {
+    flex: 1;
+}
+
+.carousel {
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 20fr 21fr 20fr;
+}
+
+.prevSlide, .currentSlide, .nextSlide
+{   
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prevSlide,
+.nextSlide
+{
+    margin: 0 1rem;
+}
+
+.prevImg, .currentImg, .nextImg
+{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0.5em;
+    object-fit: fill;
+}
+.prevImg,
+.nextImg
+{
+    max-height: 60%;
+    max-width: 90%;
+    opacity: 0.8;
+    filter: brightness(30%);
+}
+
+.currentImg
+{
+    filter: brightness(110%);
+    max-height: 70%;
+    max-width: 100%;
+    
+}
+.currentSlide {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.currentImg:hover{
+    transform: scale(1.05);
+}
+
+
+@media only screen and (min-width: 700px) {
+
+    .btnPlay
+    {
+        position: absolute;
+        max-height: 5em;
+        max-width: 5em;
+        z-index: 3;
+    }
+
+    .text {
+        text-align: center;
+        color: black;
+        font-family: 'Oswald', sans-serif;
+        font-weight: bold;
+        line-height: 1.1;
+        margin: 0;
+    }
+
+    .backButton, .forwardButton
+    {
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        
+       
+    }
+
+    .backButton
+    {
+        left: -10%;
+        z-index: 3;
+        &:hover {
+                transform: scale(1.1);
+            }
+    }
+
+    .forwardButton
+    {
+        transform: scaleX(-1);
+        z-index: 3;
+        right: -10%;
+        &:hover 
+        {
+            transform: scale(-1.1);
+;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+
+    .btnPlay {
+        position: absolute;
+        max-height: 2em;
+        max-width: 2em;
+    }
+    .text {
+        text-align: center;
+        color: black;
+        font-family: 'Oswald', sans-serif;
+        font-weight: bold;
+        font-size: 0.5em;
+        line-height: 1.1;
+        margin: 0;
+    }
+
+        .backButton {display: none}
+    
+        .forwardButton {display: none}
+
+}
