@@ -154,7 +154,7 @@ export class MainPageComponent implements OnInit {
         this.searchVideosArray = items.map((item: any) => {
           return {
             title: item.snippet.title,
-            id: item.id,
+            id: item.id.videoId,
             channel: item.snippet.channelTitle,
             published: new Date(item.snippet.publishedAt),
             img: item.snippet.thumbnails.high.url
