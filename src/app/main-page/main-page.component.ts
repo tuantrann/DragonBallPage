@@ -26,10 +26,10 @@ export class MainPageComponent implements OnInit {
   private accessToken = '';
   likedVideos: any;
   popularVideos: any;
-  sliderArray: any = [];
-  popularMusicArray: any = [];
-  searchVideosArray: any = [];
-  inputValue: any = '';
+  sliderArray: any;
+  popularMusicArray: any;
+  searchVideosArray: any;
+  inputValue: any;
 
   constructor(private router: Router, 
       private authService: SocialAuthService,
@@ -41,8 +41,8 @@ export class MainPageComponent implements OnInit {
   async getAccessToken() {
     await this.authService.getAccessToken(GoogleLoginProvider.PROVIDER_ID).then( (temp) => {
       this.accessToken = temp
-      this.getPopularMusicVideo()
       this.getLikedVideos()
+      this.getPopularMusicVideo()
 
     }
       
@@ -108,7 +108,7 @@ export class MainPageComponent implements OnInit {
       this.sliderArray = items.map((item: any) => {
           return {
             title: item.snippet.title,
-            id: item.id.videoId,
+            id: item.id,
             channel: item.snippet.channelTitle,
             published: new Date(item.snippet.publishedAt),
             img: item.snippet.thumbnails.high.url
@@ -137,7 +137,7 @@ export class MainPageComponent implements OnInit {
       this.popularMusicArray = items.map((item: any) => {
           return {
             title: item.snippet.title,
-            id: item.id.videoId,
+            id: item.id,
             channel: item.snippet.channelTitle,
             published: new Date(item.snippet.publishedAt),
             img: item.snippet.thumbnails.high.url
@@ -154,7 +154,7 @@ export class MainPageComponent implements OnInit {
         this.searchVideosArray = items.map((item: any) => {
           return {
             title: item.snippet.title,
-            id: item.id.videoId,
+            id: item.id,
             channel: item.snippet.channelTitle,
             published: new Date(item.snippet.publishedAt),
             img: item.snippet.thumbnails.high.url
