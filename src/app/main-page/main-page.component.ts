@@ -41,8 +41,9 @@ export class MainPageComponent implements OnInit {
   async getAccessToken() {
     await this.authService.getAccessToken(GoogleLoginProvider.PROVIDER_ID).then( (temp) => {
       this.accessToken = temp
-      this.getLikedVideos()
       this.getPopularMusicVideo()
+      this.getLikedVideos()
+
     }
       
     );
